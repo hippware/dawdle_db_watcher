@@ -27,5 +27,5 @@ push: ## Push the Docker image to the cloud
 	@docker push $(IMAGE_NAME):$(IMAGE_TAG)
 	@docker push $(IMAGE_NAME):latest
 
-run: ## Run the docker image.
+run: ## Run the docker image
 	@docker run -it --rm $(IMAGE_NAME):latest ${ARGS}

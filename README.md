@@ -1,2 +1,2 @@
-# wocky_db_watcher
+# DawdleDB Watcher
 App for monitoring DB and posting events to SQS
