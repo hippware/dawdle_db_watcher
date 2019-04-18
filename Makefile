@@ -21,8 +21,8 @@ dockerlint: ## Run dockerlint on the Dockerfiles
 	@docker run -it --rm -v "${PWD}/Dockerfile":/Dockerfile:ro redcoolbeans/dockerlint:latest
 
 build: ## Build the release Docker image
-	docker build . -t $(IMAGE_NAME):$(IMAGE_TAG) -t $(IMAGE_NAME):latest
+	@docker build . -t $(IMAGE_NAME):$(IMAGE_TAG) -t $(IMAGE_NAME):latest
 
-push: ## Push the Docker image to ECR
-	docker push $(IMAGE_NAME):$(IMAGE_TAG)
-	docker push $(IMAGE_NAME):latest
+push: ## Push the Docker image to the cloud
+	@docker push $(IMAGE_NAME):$(IMAGE_TAG)
+	@docker push $(IMAGE_NAME):latest
